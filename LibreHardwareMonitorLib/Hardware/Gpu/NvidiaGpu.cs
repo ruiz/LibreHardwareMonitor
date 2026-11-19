@@ -59,6 +59,7 @@ internal sealed class NvidiaGpu : GenericGpu
         0x89EC1043, // Astral 5090 LC
         0x89E31043, // Astral 5090 OC
         0x89DE1043, // Astral 5080 OC
+        0x8A2E1043, // Astral 5090 OC White
     ];
 
     public NvidiaGpu(int adapterIndex, NvApi.NvPhysicalGpuHandle handle, NvApi.NvDisplayHandle? displayHandle, ISettings settings)
@@ -458,12 +459,12 @@ internal sealed class NvidiaGpu : GenericGpu
             {
                 _12VHPwrPinVoltageSensors =
                 [
-                    new Sensor("12VHPWR Pin 1", 0, SensorType.Voltage, this, settings),
-                    new Sensor("12VHPWR Pin 2", 1, SensorType.Voltage, this, settings),
-                    new Sensor("12VHPWR Pin 3", 2, SensorType.Voltage, this, settings),
-                    new Sensor("12VHPWR Pin 4", 3, SensorType.Voltage, this, settings),
-                    new Sensor("12VHPWR Pin 5", 4, SensorType.Voltage, this, settings),
-                    new Sensor("12VHPWR Pin 6", 5, SensorType.Voltage, this, settings),
+                    new Sensor("12VHPWR Pin 1", 6, SensorType.Voltage, this, settings),
+                    new Sensor("12VHPWR Pin 2", 7, SensorType.Voltage, this, settings),
+                    new Sensor("12VHPWR Pin 3", 8, SensorType.Voltage, this, settings),
+                    new Sensor("12VHPWR Pin 4", 9, SensorType.Voltage, this, settings),
+                    new Sensor("12VHPWR Pin 5", 10, SensorType.Voltage, this, settings),
+                    new Sensor("12VHPWR Pin 6", 11, SensorType.Voltage, this, settings),
                 ];
                 _12VHPwrPinCurrentSensors =
                 [
